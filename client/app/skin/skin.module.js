@@ -1,9 +1,9 @@
 const text = {
   app: {
-    name: 'ManageIQ Self Service'
+    name: 'Mindstack Self Service'
   },
   login: {
-    brand: '<strong>ManageIQ</strong> Self Service'
+    brand: '<strong>Mindstack</strong> Self Service'
   }
 }
 
@@ -15,6 +15,6 @@ export const SkinModule = angular
 
 /** @ngInject */
 function configure (routerHelperProvider, exceptionHandlerProvider) {
-  exceptionHandlerProvider.configure('[ManageIQ] ')
-  routerHelperProvider.configure({docTitle: 'ManageIQ: '})
+  exceptionHandlerProvider.configure('[Mindstack] ')
+  routerHelperProvider.configure({docTitle: 'Mindstack: '})
 }

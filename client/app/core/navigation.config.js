@@ -36,12 +36,20 @@ export function navConfig (NavigationProvider) {
     originalTooltip: 'The total number of available catalogs'
   })
 
+  const myLink = createItem({
+    title: N_('About Me'),
+    originalTitle: 'About Me',
+    state: 'about-me',
+    iconClass: 'fa fa-address-card'
+  })
+
   NavigationProvider.configure({
     items: {
       dashboard: dashboard,
       services: services,
       orders: orders,
-      catalogs: catalogs
+      catalogs: catalogs,
+      myLink: myLink
     }
   })
 
