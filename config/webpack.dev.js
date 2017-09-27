@@ -13,6 +13,7 @@ const dist = path.resolve(__dirname, outputPath)
 const nodeModules = path.resolve(__dirname, '../node_modules')
 const protocol = process.env.PROXY_PROTOCOL || 'http://'
 const host = process.env.PROXY_HOST || process.env.MOCK_API_HOST || '[::1]:3000'
+const port = process.env.PORT || 3001
 const hasSkinImages = fs.existsSync(`${root}/skin/images`)
 const appBasePath = process.env.NODE_ENV === 'production' ? "'/ui/service/'" : "'/'"
 
@@ -33,7 +34,7 @@ module.exports = {
   devServer: {
     contentBase: root,
     historyApiFallback: true,
-    port: 3001,
+    port: port,
     proxy: {
       '/api': {
         target: `${protocol}${host}`,
